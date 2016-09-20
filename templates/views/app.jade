@@ -1,0 +1,49 @@
+extends ../layouts/default
+
+block intro
+	//- .subnav
+	//- 	.col.m6
+	//- 	.col.m6
+	//- 		a.btn.btn-flat(href="#") Add Company
+	//- 		a.btn.btn-flat(href="#") Add Contact
+	//- .container
+		//- h1 Dashboard
+
+block content
+	.row.expanded.padding
+		.column.medium-4
+			h4 Tasks <small><a href="#" data-open="newTaskModal">+ New Task</a></small>
+			for task in [1,2,3,4,5]
+				.card
+					a(href="")
+						h5 Task #{task}
+		.column.medium-4
+			h4 Companies <small><a href="#" data-open="newCompanyModal">+ New Company</a></small>
+			for company in companies
+				a(href="/app/companies/#{company.slug}")
+					.card
+						h5(style="color: #111;")= company.name
+						//- p 4 Contacts
+						div
+							for contact in contacts
+								span.has-tip(data-tooltip aria-haspopup="true" data-disable-hover="false" title="#{contact.name}")
+									img.circle.responsive-img(src=contact.photo.url, style="height: 40px; width: 40px; margin: 5px;")
+								//- | #{contact.name}
+							//- .card-action
+								a(href="/app/companies/#{company.slug}") View &rarr;
+		.column.medium-4
+			h4 Contacts <small><a href="#" data-open="newContactModal">+ New Contact</a></small>
+			for contact in contacts
+				a(href="/app/contacts/#{contact.slug}")
+					.card
+						.row
+							.column.medium-4
+								img.circle(src= contact.photo.url, alt= contact.name)
+							.column.medium-8
+								h5: = contact.name
+								p.small #{contact.title} at <a href="#">Company</a>
+
+	.container
+					// h3= company.name
+					// pre!= company
+

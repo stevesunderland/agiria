@@ -1,0 +1,28 @@
+extends ../layouts/default
+
+block intro
+	.subnav
+		.col.12
+			| [subnav]
+	.container
+		h1 Companies
+
+block content
+	.container
+		for company in companies
+			.card.horizontal
+				.card-image
+					img(src= company.logo.url)
+				.card-stacked
+					.card-content
+						h3= company.name
+					.card-action
+						a(href="#") View &rarr;
+			// h3= company.name
+			// pre!= company
+			div
+				for contact in contacts
+					.chip
+						img(src=contact.photo.url)
+						| #{contact.name}
+

@@ -1,0 +1,112 @@
+body {
+  background-color: #f5f5f5; }
+
+#header {
+  margin-top: 30px; }
+
+footer {
+  border-top: 1px solid #eeeeee;
+  color: #777777;
+  padding: 2em 4em !important; }
+  footer * {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: .1em; }
+  footer a {
+    color: #999; }
+
+.gallery-image img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+
+small {
+  font-size: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  font-family: 'Open Sans', sans-serif; }
+
+h4 small {
+  float: right;
+  margin-top: 1.9em; }
+  h4 small a {
+    color: #999; }
+
+h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: .1em;
+  color: #ccc; }
+
+p.small {
+  font-size: .8em; }
+
+textarea.notes {
+  border: none;
+  background-color: #eee;
+  box-shadow: none;
+  padding: 0;
+  font-size: 12px; }
+
+.circle {
+  border-radius: 1000px; }
+
+.button {
+  text-transform: uppercase; }
+  .button.round {
+    border-radius: 1000px; }
+
+.has-tip {
+  border-bottom: 0; }
+
+.top-bar {
+  padding: 1em 2em;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd; }
+  .top-bar ul {
+    background-color: transparent; }
+  .top-bar .menu a {
+    color: #999; }
+  .top-bar .dropdown.menu > li.is-dropdown-submenu-parent > a:after {
+    border-color: #999 transparent transparent; }
+  .top-bar .top-bar-title a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .2em;
+    font-size: .9em; }
+
+.padding {
+  padding: 4em 2em; }
+
+.card {
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  background: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 0 0 #eee; }
+  .card:hover {
+    box-shadow: 0 5px 10px #ddd; }
+  .card * {
+    color: inherit; }
+
+.sidebar {
+  background-color: #eee;
+  min-height: 100vh; }
+
+svg image {
+  border-radius: 100px; }
